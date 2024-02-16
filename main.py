@@ -1,6 +1,6 @@
 import re
 
-from interactions import Client, Intents, listen, slash_command, SlashContext, Embed, FlatUIColors
+from interactions import Client, Intents, listen, slash_command, SlashContext, Embed, FlatUIColors, SlashCommandOption, SlashCommandChoice, OptionType
 from interactions.api.events import CommandError
 
 import traceback
@@ -64,7 +64,7 @@ steps = [
         ]
     },
     {
-        "step": "type",
+        "step": "ftype",
         "items": [
             {"name": "other", "description": "Визитка/Челлендж"},
             {"name": "img", "description": "Арт"},
@@ -81,11 +81,32 @@ steps = [
 ]
 
 
-@slash_command(name="random", description="Get Random Work")
-async def my_command_function(ctx: SlashContext):
+@slash_command(
+    name="random",
+    description="Get Random Work",
+    options=[
+        SlashCommandOption(
+            name=el["step"],
+            type=OptionType.STRING,
+            required=False,
+            choices=[
+                SlashCommandChoice(name=item["description"], value=item["name"]) for item in el["items"]
+            ]
+        ) for el in steps
+    ]
+)
+async def random_command_function(ctx: SlashContext, season: str = False, year: str = False, ftype: str = False, rating: str = False):
     try:
         txt = ["Получена команда RANDOM"]
         choice = {}
+        if season:
+            choice["season"] = season
+        if year:
+            choice["year"] = year
+        if ftype:
+            choice["ftype"] = ftype
+        if rating:
+            choice["rating"] = rating
         message = await ctx.send('\n'.join(txt))
 
         for element in steps:
@@ -93,8 +114,12 @@ async def my_command_function(ctx: SlashContext):
             txt.append(f'{step}...')
             await message.edit(content='\n'.join(txt))
 
-            item = random.choice(
-                [i for i in items if choice["season"] in i["season"]] if step == "year" else items)
+            if not step in choice:
+                item = random.choice(
+                    [i for i in items if choice["season"] in i["season"]] if step == "year" else items)
+            else:
+                item = [i for i in items if i["name"] == choice[step]][0]
+
             txt[-1] = f'{step} -> {item["description"]}'
             choice[step] = item["name"]
             await message.edit(content='\n'.join(txt))
@@ -104,7 +129,7 @@ async def my_command_function(ctx: SlashContext):
 
         collections = [d for d in data if
                        d["season"] in choice["season"]
-                       and choice["type"] in d["type"]
+                       and choice["ftype"] in d["ftype"]
                        and choice["rating"] in d["rating"]
                        and choice["year"] in d["year"]
                        ]
@@ -131,6 +156,11 @@ async def my_command_function(ctx: SlashContext):
                 "exclude_work_search[rating_ids][]=10",
                 "exclude_work_search[rating_ids][]=11"
             ]
+            
+        if choice['ftype'] == 'txt':
+            works_query.append("work_search[words_from]=100")
+        elif choice['ftype'] == 'img':
+            works_query.append("work_search[words_to]=100")
 
         r = requests.get(f"{works_url}?{'&'.join(works_query)}")
         soup = BeautifulSoup(r.content, 'html.parser')
@@ -143,6 +173,11 @@ async def my_command_function(ctx: SlashContext):
         soup = BeautifulSoup(r.content, 'html.parser')
         random_work = random.choice(soup.select(
             'li.work .heading > a:first-child'))
+        
+        if not random_work:
+            txt.append('Работ по этим параметрам не найдено')
+            await message.edit(content='\n'.join(txt))
+            return
 
         txt.append(f'page: {random_page}, work: {random_work.getText()}')
         await message.edit(content='\n'.join(txt))
@@ -152,14 +187,14 @@ async def my_command_function(ctx: SlashContext):
         soup = BeautifulSoup(r.content, 'html.parser')
 
         image = soup.select_one("#chapters img")
-        
+
         textnode = re.sub(
             r"\n+", '\n', soup.select_one('#chapters').text, flags=re.MULTILINE).strip()
         if (len(textnode.split(' ')) > 100):
             textnode = textnode.split(' ')[0:99]
             textnode.append('...')
             textnode = ' '.join(textnode)
-            
+
         rating = soup.select_one('.rating li a').getText().lower()
         ratingColors = {
             "explicit": FlatUIColors.ALIZARIN,
@@ -168,7 +203,7 @@ async def my_command_function(ctx: SlashContext):
             "general audiences": FlatUIColors.EMERLAND,
             "not rated": FlatUIColors.SILVER
         }
-        
+
         freeform = [item.getText() for item in soup.select(
             '.freeform li a')] or ['no freeform tags']
         character = [item.getText() for item in soup.select(
@@ -182,7 +217,7 @@ async def my_command_function(ctx: SlashContext):
             title=soup.select_one('h2.heading').getText(),
             description=textnode,
             url=f"https://archiveofourown.org{random_work.get('href')}",
-            images=[image.get('src')] if choice["type"] in [
+            images=[image.get('src')] if choice["ftype"] in [
                 "img", "other"] and image else [],
             color=ratingColors[rating],
             fields=[
@@ -190,7 +225,8 @@ async def my_command_function(ctx: SlashContext):
                 {"name": 'fandom', "value": ', '.join(fandom)},
                 {"name": 'character', "value": ', '.join(character)},
                 {"name": 'freeform', "value": ', '.join(freeform)},
-                {"name": 'collection', "value": choice["collection"]["name"]}
+                {"name": 'collection', "value": choice["collection"]["name"]},
+                {"name": 'search_request', "value": f"{works_url}?{'&'.join(works_query)}"}
             ]
         )
         await message.edit(embed=embed, content='')

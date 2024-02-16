@@ -4,7 +4,7 @@
         "name": "Level 1: Визитка 2020",
         "year": "2020",
         "season": "fk",
-        "type": "other",
+        "ftype": "other",
         "rating": [
             "gt",
             "me"
@@ -15,7 +15,7 @@
         "name": "Level 2 Quest 1: Драбблы/Мини от G до T 2020",
         "year": "2020",
         "season": "fk",
-        "type": "txt",
+        "ftype": "txt",
         "rating": "gt"
     },
     {
@@ -23,7 +23,7 @@
         "name": "Level 2 Quest 2: Визуал от G до T 2020",
         "year": "2020",
         "season": "fk",
-        "type": "img",
+        "ftype": "img",
         "rating": "gt"
     },
     {
@@ -31,7 +31,7 @@
         "name": "Level 2 Quest 3: Миди от G до T 2020",
         "year": "2020",
         "season": "fk",
-        "type": "txt",
+        "ftype": "txt",
         "rating": "gt"
     },
     {
@@ -39,7 +39,7 @@
         "name": "Level 3: Челлендж 2020",
         "year": "2020",
         "season": "fk",
-        "type": "other",
+        "ftype": "other",
         "rating": [
             "gt",
             "me"
@@ -50,7 +50,7 @@
         "name": "Level 4 Quest 1: ББ-квест 2020 (макси)",
         "year": "2020",
         "season": "fk",
-        "type": "txt",
+        "ftype": "txt",
         "rating": [
             "gt",
             "me"
@@ -61,7 +61,7 @@
         "name": "Level 4 Quest 2: ББ-квест 2020 (иллюстрации)",
         "year": "2020",
         "season": "fk",
-        "type": "img",
+        "ftype": "img",
         "rating": [
             "gt",
             "me"
@@ -72,7 +72,7 @@
         "name": "Level 5 Quest 1: Драбблы/Мини от M до E 2020",
         "year": "2020",
         "season": "fk",
-        "type": "txt",
+        "ftype": "txt",
         "rating": "me"
     },
     {
@@ -80,7 +80,7 @@
         "name": "Level 5 Quest 2: Визуал от M до E 2020",
         "year": "2020",
         "season": "fk",
-        "type": "img",
+        "ftype": "img",
         "rating": "me"
     },
     {
@@ -88,7 +88,7 @@
         "name": "Level 5 Quest 3: Миди от M до E 2020",
         "year": "2020",
         "season": "fk",
-        "type": "txt",
+        "ftype": "txt",
         "rating": "me"
     },
     {
@@ -96,7 +96,7 @@
         "name": "Level 6: Спецквест 2020 (кинки)",
         "year": "2020",
         "season": "fk",
-        "type": [
+        "ftype": [
             "txt",
             "img"
         ],
@@ -110,7 +110,7 @@
         "name": "Level 6: Спецквест 2020 (объекты SCP)",
         "year": "2020",
         "season": "fk",
-        "type": [
+        "ftype": [
             "txt",
             "img"
         ],
@@ -124,7 +124,7 @@
         "name": "Внеконкурс 2020",
         "year": "2020",
         "season": "fk",
-        "type": [
+        "ftype": [
             "txt",
             "img"
         ],
@@ -138,7 +138,7 @@
         "name": "Level 1: Визитка 2021",
         "year": "2021",
         "season": "fk",
-        "type": "other",
+        "ftype": "other",
         "rating": [
             "gt",
             "me"
@@ -149,7 +149,7 @@
         "name": "Level 2 Quest 1: Мибблы от G до T 2021",
         "year": "2021",
         "season": "fk",
-        "type": "txt",
+        "ftype": "txt",
         "rating": "gt"
     },
     {
@@ -157,7 +157,7 @@
         "name": "Level 2 Quest 2: Визуал от G до T 2021",
         "year": "2021",
         "season": "fk",
-        "type": "img",
+        "ftype": "img",
         "rating": "gt"
     },
     {
@@ -165,7 +165,7 @@
         "name": "Level 2 Quest 3: Миди от G до T 2021",
         "year": "2021",
         "season": "fk",
-        "type": "txt",
+        "ftype": "txt",
         "rating": "gt"
     },
     {
@@ -173,7 +173,7 @@
         "name": "Level 3: Челлендж 2021",
         "year": "2021",
         "season": "fk",
-        "type": "other",
+        "ftype": "other",
         "rating": [
             "gt",
             "me"
@@ -184,7 +184,7 @@
         "name": "Level 4 Quest 1: ББ-квест 2021 (макси)",
         "year": "2021",
         "season": "fk",
-        "type": "txt",
+        "ftype": "txt",
         "rating": [
             "gt",
             "me"
@@ -195,7 +195,7 @@
         "name": "Level 4 Quest 2: ББ-квест 2021 (иллюстрации)",
         "year": "2021",
         "season": "fk",
-        "type": "img",
+        "ftype": "img",
         "rating": [
             "gt",
             "me"
@@ -206,7 +206,7 @@
         "name": "Level 5 Quest 1: Мибблы от M до E 2021",
         "year": "2021",
         "season": "fk",
-        "type": "txt",
+        "ftype": "txt",
         "rating": "me"
     },
     {
@@ -214,7 +214,7 @@
         "name": "Level 5 Quest 2: Визуал от M до E 2021",
         "year": "2021",
         "season": "fk",
-        "type": "img",
+        "ftype": "img",
         "rating": "me"
     },
     {
@@ -222,7 +222,7 @@
         "name": "Level 5 Quest 3: Миди от M до E 2021",
         "year": "2021",
         "season": "fk",
-        "type": "txt",
+        "ftype": "txt",
         "rating": "me"
     },
     {
@@ -230,7 +230,7 @@
         "name": "Level 6: Спецквест (роад-стори/таймтревел)",
         "year": "2021",
         "season": "fk",
-        "type": [
+        "ftype": [
             "txt",
             "img"
         ],
@@ -244,7 +244,7 @@
         "name": "Level 6: Спецквест (тэглайны фильмов и сериалов)",
         "year": "2021",
         "season": "fk",
-        "type": [
+        "ftype": [
             "txt",
             "img"
         ],
@@ -258,7 +258,7 @@
         "name": "Внеконкурс 2021",
         "year": "2021",
         "season": "fk",
-        "type": [
+        "ftype": [
             "txt",
             "img"
         ],
@@ -272,7 +272,7 @@
         "name": "Level 1: Визитка 2022",
         "year": "2022",
         "season": "fk",
-        "type": "other",
+        "ftype": "other",
         "rating": [
             "gt",
             "me"
@@ -283,7 +283,7 @@
         "name": "Level 2 Quest 1: Мибблы от G до T 2022",
         "year": "2022",
         "season": "fk",
-        "type": "txt",
+        "ftype": "txt",
         "rating": "gt"
     },
     {
@@ -291,7 +291,7 @@
         "name": "Level 2 Quest 2: Визуал от G до T 2022",
         "year": "2022",
         "season": "fk",
-        "type": "img",
+        "ftype": "img",
         "rating": "gt"
     },
     {
@@ -299,7 +299,7 @@
         "name": "Level 2 Quest 3: Миди от G до T 2022",
         "year": "2022",
         "season": "fk",
-        "type": "txt",
+        "ftype": "txt",
         "rating": "gt"
     },
     {
@@ -307,7 +307,7 @@
         "name": "Level 3: Челлендж 2022",
         "year": "2022",
         "season": "fk",
-        "type": "other",
+        "ftype": "other",
         "rating": [
             "gt",
             "me"
@@ -318,7 +318,7 @@
         "name": "Level 4 Quest 1: ББ-квест 2022 (макси)",
         "year": "2022",
         "season": "fk",
-        "type": "txt",
+        "ftype": "txt",
         "rating": [
             "gt",
             "me"
@@ -329,7 +329,7 @@
         "name": "Level 4 Quest 2: ББ-квест 2022 (иллюстрации)",
         "year": "2022",
         "season": "fk",
-        "type": "txt",
+        "ftype": "txt",
         "rating": [
             "gt",
             "me"
@@ -340,7 +340,7 @@
         "name": "Level 5 Quest 1: Мибблы от M до E 2022",
         "year": "2022",
         "season": "fk",
-        "type": "txt",
+        "ftype": "txt",
         "rating": "me"
     },
     {
@@ -348,7 +348,7 @@
         "name": "Level 5 Quest 2: Визуал от M до E 2022",
         "year": "2022",
         "season": "fk",
-        "type": "img",
+        "ftype": "img",
         "rating": "me"
     },
     {
@@ -356,7 +356,7 @@
         "name": "Level 5 Quest 3: Миди от M до E 2022",
         "year": "2022",
         "season": "fk",
-        "type": "txt",
+        "ftype": "txt",
         "rating": "me"
     },
     {
@@ -364,7 +364,7 @@
         "name": "Level 6: Спецквест 2022 (загадочные происшествия и явления)",
         "year": "2022",
         "season": "fk",
-        "type": [
+        "ftype": [
             "txt",
             "img"
         ],
@@ -378,7 +378,7 @@
         "name": "Level 6: Спецквест 2022 (фразы нейросети)",
         "year": "2022",
         "season": "fk",
-        "type": [
+        "ftype": [
             "txt",
             "img"
         ],
@@ -392,7 +392,7 @@
         "name": "Внеконкурс 2022",
         "year": "2022",
         "season": "fk",
-        "type": [
+        "ftype": [
             "txt",
             "img"
         ],
@@ -406,7 +406,7 @@
         "name": "Мультиязычная экспериментальная коллекция 2022",
         "year": "2022",
         "season": "fk",
-        "type": [
+        "ftype": [
             "img",
             "txt"
         ],
@@ -420,7 +420,7 @@
         "name": "Level 1: Визитка 2023",
         "year": "2023",
         "season": "fk",
-        "type": "other",
+        "ftype": "other",
         "rating": [
             "gt",
             "me"
@@ -431,7 +431,7 @@
         "name": "Level 2 Quest 1: Мибблы от G до T 2023",
         "year": "2023",
         "season": "fk",
-        "type": "txt",
+        "ftype": "txt",
         "rating": "gt"
     },
     {
@@ -439,7 +439,7 @@
         "name": "Level 2 Quest 2: Визуал от G до T 2023",
         "year": "2023",
         "season": "fk",
-        "type": "img",
+        "ftype": "img",
         "rating": "gt"
     },
     {
@@ -447,7 +447,7 @@
         "name": "Level 2 Quest 3: Миди от G до T 2023",
         "year": "2023",
         "season": "fk",
-        "type": "txt",
+        "ftype": "txt",
         "rating": "gt"
     },
     {
@@ -455,7 +455,7 @@
         "name": "Level 3: Челлендж 2023",
         "year": "2023",
         "season": "fk",
-        "type": "other",
+        "ftype": "other",
         "rating": [
             "gt",
             "me"
@@ -466,7 +466,7 @@
         "name": "Level 4 Quest 1: ББ-квест 2023 (макси)",
         "year": "2023",
         "season": "fk",
-        "type": "txt",
+        "ftype": "txt",
         "rating": [
             "gt",
             "me"
@@ -477,7 +477,7 @@
         "name": "Level 4 Quest 2: ББ-квест 2023 (иллюстрации)",
         "year": "2023",
         "season": "fk",
-        "type": "img",
+        "ftype": "img",
         "rating": [
             "gt",
             "me"
@@ -488,7 +488,7 @@
         "name": "Level 5 Quest 1: Мибблы от M до E 2023",
         "year": "2023",
         "season": "fk",
-        "type": "txt",
+        "ftype": "txt",
         "rating": "me"
     },
     {
@@ -496,7 +496,7 @@
         "name": "Level 5 Quest 2: Визуал от M до E 2023",
         "year": "2023",
         "season": "fk",
-        "type": "img",
+        "ftype": "img",
         "rating": "me"
     },
     {
@@ -504,7 +504,7 @@
         "name": "Level 5 Quest 3: Миди от M до E 2023",
         "year": "2023",
         "season": "fk",
-        "type": "txt",
+        "ftype": "txt",
         "rating": "me"
     },
     {
@@ -512,7 +512,7 @@
         "name": "Level 6: Спецквест 2023 (Океаны и течения)",
         "year": "2023",
         "season": "fk",
-        "type": [
+        "ftype": [
             "txt",
             "img"
         ],
@@ -526,7 +526,7 @@
         "name": "Level 6: Спецквест 2023 (Японские сезоны)",
         "year": "2023",
         "season": "fk",
-        "type": [
+        "ftype": [
             "txt",
             "img"
         ],
@@ -540,7 +540,7 @@
         "name": "Внеконкурс 2023",
         "year": "2023",
         "season": "fk",
-        "type": [
+        "ftype": [
             "txt",
             "img"
         ],
@@ -554,7 +554,7 @@
         "name": "Мультиязычный внеконкурс 2023",
         "year": "2023",
         "season": "fk",
-        "type": [
+        "ftype": [
             "txt",
             "img"
         ],
@@ -568,7 +568,7 @@
         "name": "Level 1: Визитка 2021",
         "year": "2021",
         "season": "wtfk",
-        "type": "other",
+        "ftype": "other",
         "rating": [
             "gt",
             "me"
@@ -579,7 +579,7 @@
         "name": "Level 1: Визитка 2021 (внеконкурс)",
         "year": "2021",
         "season": "wtfk",
-        "type": "other",
+        "ftype": "other",
         "rating": [
             "gt",
             "me"
@@ -590,7 +590,7 @@
         "name": "Level 2 Quest 1: Тексты от G до T 2021",
         "year": "2021",
         "season": "wtfk",
-        "type": "txt",
+        "ftype": "txt",
         "rating": "gt"
     },
     {
@@ -598,7 +598,7 @@
         "name": "Level 2 Quest 1: Тексты от G до T 2021 (внеконкурс)",
         "year": "2021",
         "season": "wtfk",
-        "type": "txt",
+        "ftype": "txt",
         "rating": "gt"
     },
     {
@@ -606,7 +606,7 @@
         "name": "Level 2 Quest 2: Визуал от G до T 2021",
         "year": "2021",
         "season": "wtfk",
-        "type": "img",
+        "ftype": "img",
         "rating": "gt"
     },
     {
@@ -614,7 +614,7 @@
         "name": "Level 2 Quest 2: Визуал от G до T 2021 (внеконкурс)",
         "year": "2021",
         "season": "wtfk",
-        "type": "img",
+        "ftype": "img",
         "rating": "gt"
     },
     {
@@ -622,7 +622,7 @@
         "name": "Level 3: Челлендж 2021",
         "year": "2021",
         "season": "wtfk",
-        "type": "other",
+        "ftype": "other",
         "rating": [
             "gt",
             "me"
@@ -633,7 +633,7 @@
         "name": "Level 3: Челлендж 2021 (внеконкурс)",
         "year": "2021",
         "season": "wtfk",
-        "type": "other",
+        "ftype": "other",
         "rating": [
             "gt",
             "me"
@@ -644,7 +644,7 @@
         "name": "Level 4 Quest 1: Тексты от М до E 2021",
         "year": "2021",
         "season": "wtfk",
-        "type": "txt",
+        "ftype": "txt",
         "rating": "me"
     },
     {
@@ -652,7 +652,7 @@
         "name": "Level 4 Quest 1: Тексты от М до E 2021 (внеконкурс)",
         "year": "2021",
         "season": "wtfk",
-        "type": "txt",
+        "ftype": "txt",
         "rating": "me"
     },
     {
@@ -660,7 +660,7 @@
         "name": "Level 4 Quest 2: Визуал от М до E 2021",
         "year": "2021",
         "season": "wtfk",
-        "type": "img",
+        "ftype": "img",
         "rating": "me"
     },
     {
@@ -668,7 +668,7 @@
         "name": "Level 4 Quest 2: Визуал от М до E 2021 (внеконкурс)",
         "year": "2021",
         "season": "wtfk",
-        "type": "img",
+        "ftype": "img",
         "rating": "me"
     },
     {
@@ -676,7 +676,7 @@
         "name": "Level 5: Спецквест 2021 (божественное)",
         "year": "2021",
         "season": "wtfk",
-        "type": [
+        "ftype": [
             "txt",
             "img"
         ],
@@ -690,7 +690,7 @@
         "name": "Level 5: Спецквест 2021 (божественное) (внеконкурс)",
         "year": "2021",
         "season": "wtfk",
-        "type": [
+        "ftype": [
             "txt",
             "img"
         ],
@@ -704,7 +704,7 @@
         "name": "Level 5: Спецквест 2021 (игры и состязания)",
         "year": "2021",
         "season": "wtfk",
-        "type": [
+        "ftype": [
             "txt",
             "img"
         ],
@@ -718,7 +718,7 @@
         "name": "Level 5: Спецквест 2021 (игры и состязания) (внеконкурс)",
         "year": "2021",
         "season": "wtfk",
-        "type": [
+        "ftype": [
             "txt",
             "img"
         ],
@@ -732,7 +732,7 @@
         "name": "Level 1: Визитка 2021",
         "year": "2021",
         "season": "wtfk",
-        "type": "other",
+        "ftype": "other",
         "rating": [
             "gt",
             "me"
@@ -743,7 +743,7 @@
         "name": "Level 1: Визитка 2021 (внеконкурс)",
         "year": "2021",
         "season": "wtfk",
-        "type": "other",
+        "ftype": "other",
         "rating": [
             "gt",
             "me"
@@ -754,7 +754,7 @@
         "name": "Level 2 Quest 1: Тексты от G до T 2021",
         "year": "2021",
         "season": "wtfk",
-        "type": "txt",
+        "ftype": "txt",
         "rating": "gt"
     },
     {
@@ -762,7 +762,7 @@
         "name": "Level 2 Quest 1: Тексты от G до T 2021 (внеконкурс)",
         "year": "2021",
         "season": "wtfk",
-        "type": "txt",
+        "ftype": "txt",
         "rating": "gt"
     },
     {
@@ -770,7 +770,7 @@
         "name": "Level 2 Quest 2: Визуал от G до T 2021",
         "year": "2021",
         "season": "wtfk",
-        "type": "img",
+        "ftype": "img",
         "rating": "gt"
     },
     {
@@ -778,7 +778,7 @@
         "name": "Level 2 Quest 2: Визуал от G до T 2021 (внеконкурс)",
         "year": "2021",
         "season": "wtfk",
-        "type": "img",
+        "ftype": "img",
         "rating": "gt"
     },
     {
@@ -786,7 +786,7 @@
         "name": "Level 3: Челлендж 2021",
         "year": "2021",
         "season": "wtfk",
-        "type": "other",
+        "ftype": "other",
         "rating": [
             "gt",
             "me"
@@ -797,7 +797,7 @@
         "name": "Level 3: Челлендж 2021 (внеконкурс)",
         "year": "2021",
         "season": "wtfk",
-        "type": "other",
+        "ftype": "other",
         "rating": [
             "gt",
             "me"
@@ -808,7 +808,7 @@
         "name": "Level 4 Quest 1: Тексты от М до E 2021",
         "year": "2021",
         "season": "wtfk",
-        "type": "txt",
+        "ftype": "txt",
         "rating": "me"
     },
     {
@@ -816,7 +816,7 @@
         "name": "Level 4 Quest 1: Тексты от М до E 2021 (внеконкурс)",
         "year": "2021",
         "season": "wtfk",
-        "type": "txt",
+        "ftype": "txt",
         "rating": "me"
     },
     {
@@ -824,7 +824,7 @@
         "name": "Level 4 Quest 2: Визуал от М до E 2021",
         "year": "2021",
         "season": "wtfk",
-        "type": "img",
+        "ftype": "img",
         "rating": "me"
     },
     {
@@ -832,7 +832,7 @@
         "name": "Level 4 Quest 2: Визуал от М до E 2021 (внеконкурс)",
         "year": "2021",
         "season": "wtfk",
-        "type": "img",
+        "ftype": "img",
         "rating": "me"
     },
     {
@@ -840,7 +840,7 @@
         "name": "Level 5: Спецквест 2021 (божественное)",
         "year": "2021",
         "season": "wtfk",
-        "type": [
+        "ftype": [
             "txt",
             "img"
         ],
@@ -854,7 +854,7 @@
         "name": "Level 5: Спецквест 2021 (божественное) (внеконкурс)",
         "year": "2021",
         "season": "wtfk",
-        "type": [
+        "ftype": [
             "txt",
             "img"
         ],
@@ -868,7 +868,7 @@
         "name": "Level 5: Спецквест 2021 (игры и состязания)",
         "year": "2021",
         "season": "wtfk",
-        "type": [
+        "ftype": [
             "txt",
             "img"
         ],
@@ -882,7 +882,7 @@
         "name": "Level 5: Спецквест 2021 (игры и состязания) (внеконкурс)",
         "year": "2021",
         "season": "wtfk",
-        "type": [
+        "ftype": [
             "txt",
             "img"
         ],
@@ -896,7 +896,7 @@
         "name": "Level 1: Визитка 2023",
         "year": "2023",
         "season": "wtfk",
-        "type": "other",
+        "ftype": "other",
         "rating": [
             "gt",
             "me"
@@ -907,7 +907,7 @@
         "name": "Level 2 Quest 1: Тексты от G до T 2023",
         "year": "2023",
         "season": "wtfk",
-        "type": "txt",
+        "ftype": "txt",
         "rating": "gt"
     },
     {
@@ -915,7 +915,7 @@
         "name": "Level 2 Quest 2: Визуал от G до T 2023",
         "year": "2023",
         "season": "wtfk",
-        "type": "img",
+        "ftype": "img",
         "rating": "gt"
     },
     {
@@ -923,7 +923,7 @@
         "name": "Level 3: Челлендж 2023",
         "year": "2023",
         "season": "wtfk",
-        "type": "other",
+        "ftype": "other",
         "rating": [
             "gt",
             "me"
@@ -934,7 +934,7 @@
         "name": "Level 4 Quest 1: Тексты от М до E 2023",
         "year": "2023",
         "season": "wtfk",
-        "type": "txt",
+        "ftype": "txt",
         "rating": "me"
     },
     {
@@ -942,7 +942,7 @@
         "name": "Level 4 Quest 2: Визуал от М до E 2023",
         "year": "2023",
         "season": "wtfk",
-        "type": "img",
+        "ftype": "img",
         "rating": "me"
     },
     {
@@ -950,7 +950,7 @@
         "name": "Level 5: Спецквест 2023 (Переодевания/Перевоплощения)",
         "year": "2023",
         "season": "wtfk",
-        "type": [
+        "ftype": [
             "txt",
             "img"
         ],
@@ -964,7 +964,7 @@
         "name": "Level 5: Спецквест 2023 (Фикситы)",
         "year": "2023",
         "season": "wtfk",
-        "type": [
+        "ftype": [
             "txt",
             "img"
         ],
@@ -978,7 +978,7 @@
         "name": "Зимний внеконкурс 2023",
         "year": "2023",
         "season": "wtfk",
-        "type": [
+        "ftype": [
             "txt",
             "img"
         ],
@@ -992,7 +992,7 @@
         "name": "Зимняя мультиязычная коллекция 2023",
         "year": "2023",
         "season": "wtfk",
-        "type": [
+        "ftype": [
             "txt",
             "img"
         ],
@@ -1006,7 +1006,7 @@
         "name": "Level 1: Визитка 2024",
         "year": "2024",
         "season": "wtfk",
-        "type": "other",
+        "ftype": "other",
         "rating": ""
     },
     {
@@ -1014,7 +1014,7 @@
         "name": "Level 2 Quest 1: Тексты от G до T 2024",
         "year": "2024",
         "season": "wtfk",
-        "type": "txt",
+        "ftype": "txt",
         "rating": "gt"
     },
     {
@@ -1022,7 +1022,7 @@
         "name": "Level 2 Quest 2: Визуал от G до T 2024",
         "year": "2024",
         "season": "wtfk",
-        "type": "img",
+        "ftype": "img",
         "rating": "gt"
     },
     {
@@ -1030,7 +1030,7 @@
         "name": "Level 3: Неформат 2024",
         "year": "2024",
         "season": "wtfk",
-        "type": [
+        "ftype": [
             "txt",
             "img"
         ],
@@ -1044,7 +1044,7 @@
         "name": "Level 4 Quest 1: Тексты от М до E 2024",
         "year": "2024",
         "season": "wtfk",
-        "type": "txt",
+        "ftype": "txt",
         "rating": "me"
     },
     {
@@ -1052,7 +1052,7 @@
         "name": "Level 4 Quest 2: Визуал от М до E 2024",
         "year": "2024",
         "season": "wtfk",
-        "type": "img",
+        "ftype": "img",
         "rating": "me"
     },
     {
@@ -1060,7 +1060,7 @@
         "name": "Level 5: Спецквест 2024 (Игрушки/Сувениры/Талисманы)",
         "year": "2024",
         "season": "wtfk",
-        "type": [
+        "ftype": [
             "txt",
             "img"
         ],
@@ -1074,7 +1074,7 @@
         "name": "Level 5: Спецквест 2024 (Карты Таро)",
         "year": "2024",
         "season": "wtfk",
-        "type": [
+        "ftype": [
             "txt",
             "img"
         ],
@@ -1088,7 +1088,7 @@
         "name": "Зимний внеконкурс 2024",
         "year": "2024",
         "season": "wtfk",
-        "type": [
+        "ftype": [
             "txt",
             "img"
         ],
@@ -1102,7 +1102,7 @@
         "name": "Зимняя мультиязычная коллекция 2024",
         "year": "2024",
         "season": "wtfk",
-        "type": [
+        "ftype": [
             "txt",
             "img"
         ],
