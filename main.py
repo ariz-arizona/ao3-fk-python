@@ -89,7 +89,7 @@ async def my_command_function(ctx: SlashContext):
         data = json.load(f)
 
     collections = [d for d in data if d["season"] in choice["season"]
-                   and choice["type"] in d["type"] and choice["rating"] in d["rating"]]
+                    and choice["type"] in d["type"] and choice["rating"] in d["rating"]]
     choice["collection"] = random.choice(collections)
 
     txt[-1] = f'find collections: {len(collections)}'
