@@ -1,4 +1,4 @@
-from interactions import Client, Intents, listen, slash_command, SlashContext
+from interactions import Client, Intents, listen, slash_command, SlashContext, Embed
 from interactions.api.events import CommandError
 
 import traceback
@@ -89,30 +89,39 @@ async def my_command_function(ctx: SlashContext):
         data = json.load(f)
 
     collections = [d for d in data if d["season"] in choice["season"]
-                    and choice["type"] in d["type"] and choice["rating"] in d["rating"]]
+                   and choice["type"] in d["type"] and choice["rating"] in d["rating"]]
     choice["collection"] = random.choice(collections)
 
     txt[-1] = f'find collections: {len(collections)}'
     txt.append(f'random collection: {choice["collection"]["name"]}')
     await message.edit(content='\n'.join(txt))
-    
 
-    r = requests.get(f'https://archiveofourown.org/collections/{choice["collection"]["href"]}/works')
+    r = requests.get(
+        f'https://archiveofourown.org/collections/{choice["collection"]["href"]}/works')
     soup = BeautifulSoup(r.content, 'html.parser')
     last_page = soup.select_one('.pagination li:nth-last-child(2) a')
-    random_page = random.choice(list(range(1, int(last_page.getText() if last_page else 1))))
-    
-    r = requests.get(f'https://archiveofourown.org/collections/{choice["collection"]["href"]}/works?page={random_page}')
+    random_page = random.choice(list(range(1, int(last_page.getText())))) if last_page else 1
+
+    r = requests.get(
+        f'https://archiveofourown.org/collections/{choice["collection"]["href"]}/works?page={random_page}')
     soup = BeautifulSoup(r.content, 'html.parser')
-    random_work = random.choice(soup.select('li.work .heading > a:first-child'))
-    
-    
+    random_work = random.choice(soup.select(
+        'li.work .heading > a:first-child'))
+
     txt.append(f'page: {random_page}, work: {random_work.getText()}')
     await message.edit(content='\n'.join(txt))
-    
+
     r = requests.get(f"https://archiveofourown.org{random_work.get('href')}")
     soup = BeautifulSoup(r.content, 'html.parser')
-    work_text = soup.select_one('#chapters')
-    await message.edit(content=work_text.text[0:100])
+    image = soup.select_one("#chapters img")
+    textnode = soup.select_one('#chapters')
+    
+    embed = Embed(
+        title=soup.select_one('h2.heading').getText(),
+        description=textnode.text[0:100],
+        url=f"https://archiveofourown.org{random_work.get('href')}",
+        images=[image.get('src')] if choice["type"] in ["img", "other"] and image else []
+    )
+    await message.edit(embed=embed, content='')
 
 bot.start(TOKEN)
