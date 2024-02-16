@@ -20,6 +20,9 @@ TOKEN = os.getenv("DISCORD_TOKEN")
 
 bot = Client(intents=Intents.DEFAULT)
 
+with open("collections.json", "r") as f:
+    data = json.load(f)
+
 
 @listen()  # this decorator tells snek that it needs to listen for the corresponding event, and run this coroutine
 async def on_ready():
@@ -99,9 +102,6 @@ async def my_command_function(ctx: SlashContext):
         txt.append(f'get collections list')
         await message.edit(content='\n'.join(txt))
 
-        with open("collections.json", "r") as f:
-            data = json.load(f)
-
         collections = [d for d in data if
                        d["season"] in choice["season"]
                        and choice["type"] in d["type"]
@@ -152,8 +152,14 @@ async def my_command_function(ctx: SlashContext):
         soup = BeautifulSoup(r.content, 'html.parser')
 
         image = soup.select_one("#chapters img")
+        
         textnode = re.sub(
             r"\n+", '\n', soup.select_one('#chapters').text, flags=re.MULTILINE).strip()
+        if (len(textnode.split(' ')) > 100):
+            textnode = textnode.split(' ')[0:99]
+            textnode.append('...')
+            textnode = ' '.join(textnode)
+            
         rating = soup.select_one('.rating li a').getText().lower()
         ratingColors = {
             "explicit": FlatUIColors.ALIZARIN,
@@ -162,14 +168,19 @@ async def my_command_function(ctx: SlashContext):
             "general audiences": FlatUIColors.EMERLAND,
             "not rated": FlatUIColors.SILVER
         }
-        freeform = [item.getText() for item in soup.select('.freeform li a')] or ['no freeform tags']
-        character = [item.getText() for item in soup.select('.character li a')] or ['no character tags']
-        fandom = [item.getText() for item in soup.select('.fandom li a')] or ['no fandom tags']
-        category = [item.getText() for item in soup.select('.category li a')] or ['no category tags']
+        
+        freeform = [item.getText() for item in soup.select(
+            '.freeform li a')] or ['no freeform tags']
+        character = [item.getText() for item in soup.select(
+            '.character li a')] or ['no character tags']
+        fandom = [item.getText() for item in soup.select(
+            '.fandom li a')] or ['no fandom tags']
+        category = [item.getText() for item in soup.select(
+            '.category li a')] or ['no category tags']
 
         embed = Embed(
             title=soup.select_one('h2.heading').getText(),
-            description=' '.join(textnode.split(' ')[0:100]),
+            description=textnode,
             url=f"https://archiveofourown.org{random_work.get('href')}",
             images=[image.get('src')] if choice["type"] in [
                 "img", "other"] and image else [],
